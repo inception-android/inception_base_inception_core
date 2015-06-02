@@ -1,6 +1,14 @@
 {
     "__extends__": "inception.env",
     "update": {
+        "root": {
+            "methods": {
+                "supersu": {
+                    "include_apk": true,
+                    "include_archs": []
+                }
+            }
+        },
         "script": {
             "wait": 0,
             "post": "",
