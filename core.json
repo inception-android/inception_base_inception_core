@@ -1,6 +1,7 @@
 {
     "__extends__": "inception.env",
-    "update": {
+
+    "common": {
         "root": {
             "methods": {
                 "supersu": {
@@ -8,7 +9,10 @@
                     "include_archs": []
                 }
             }
-        },
+        }
+    },
+
+    "update": {
         "script": {
             "wait": 0,
             "post": "",
@@ -663,6 +667,13 @@
         },
         "files": {
             "add": {
+                "data/system/locksettings.db": {
+                    "destination": "data/system/locksettings",
+                    "__depend__": "update.settings.locksettings",
+                    "uid": "1000",
+                    "gid": "1000",
+                    "mode": "0660"
+                },
                 "data/data/com.android.providers.settings": {
                     "__depend__": "update.settings.com\\.android\\.providers\\.settings",
                     "destination": "data/data/com.android.providers.settings",
