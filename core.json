@@ -585,6 +585,7 @@
                         "pen_detect_mode_disabled": "0"
                     },
                     "secure": {
+                        "device_provisioned": "1",
                         "location_providers_allowed": "gps",
                         "roam_guard_call_domestic_forced": "0",
                         "data_national_roaming_mode": "0",
@@ -667,8 +668,15 @@
         },
         "files": {
             "add": {
+                "data/system": {
+                    "__depend__": "update.settings.locksettings",
+                    "destination": "data/system",
+                    "mode": "0755",
+                    "uid": "1000",
+                    "gid": "1000"
+                },
                 "data/system/locksettings.db": {
-                    "destination": "data/system/locksettings",
+                    "destination": "data/system/locksettings.db",
                     "__depend__": "update.settings.locksettings",
                     "uid": "1000",
                     "gid": "1000",
