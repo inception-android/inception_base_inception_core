@@ -11,7 +11,10 @@
             }
         }
     },
-
+    "odin": {
+        "__make__": false,
+        "checksum": true
+    },
     "update": {
         "script": {
             "wait": 0,
