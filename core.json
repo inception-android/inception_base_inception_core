@@ -28,7 +28,7 @@
         "settings": {
             "locksettings": {
                 "path": "/data/system/locksettings.db",
-                "schema": "PRAGMA journal_mode=WAL;PRAGMA foreign_keys=OFF;CREATE TABLE android_metadata (locale TEXT);CREATE TABLE locksettings (_id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT,user INTEGER DEFAULT 0,value TEXT);",
+                "schema": "schemas/locksettings.schema",
                 "col_key": "name",
                 "col_val": "value",
                 "version": "2",
@@ -45,9 +45,9 @@
             },
             "com.android.providers.settings": {
                 "path": "/data/data/com.android.providers.settings/databases/settings.db",
+                "schema": "schemas/com.android.providers.settings.database.schema",
                 "version": "98",
                 "locale": "en_US",
-                "schema": "CREATE TABLE android_metadata (locale TEXT);CREATE TABLE system (_id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT UNIQUE ON CONFLICT REPLACE,value TEXT);CREATE INDEX systemIndex1 ON system (name);CREATE TABLE secure (_id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT UNIQUE ON CONFLICT REPLACE,value TEXT);CREATE INDEX secureIndex1 ON secure (name);CREATE TABLE global (_id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT UNIQUE ON CONFLICT REPLACE,value TEXT);CREATE INDEX globalIndex1 ON global (name);CREATE TABLE bluetooth_devices (_id INTEGER PRIMARY KEY,name TEXT,addr TEXT,channel INTEGER,type INTEGER);CREATE TABLE bookmarks (_id INTEGER PRIMARY KEY,title TEXT,folder TEXT,intent TEXT,shortcut INTEGER,ordering INTEGER);CREATE INDEX bookmarksIndex1 ON bookmarks (folder);CREATE INDEX bookmarksIndex2 ON bookmarks (shortcut);CREATE TABLE powersaving_appsetting (_id INTEGER PRIMARY KEY,packagename TEXT UNIQUE,mode INTEGER,autovalue INTEGER,manualvalue INTEGER);CREATE INDEX powersaving_appsettingIndex1 ON powersaving_appsetting (packagename);",
                 "col_key": "name",
                 "col_val": "value",
                 "data": {

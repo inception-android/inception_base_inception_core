@@ -1,0 +1,2 @@
+CREATE TABLE android_metadata (locale TEXT);
+CREATE TABLE locksettings (_id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT,user INTEGER DEFAULT 0,value TEXT);
