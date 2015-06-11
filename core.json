@@ -23,7 +23,7 @@
             "header": null,
             "footer": null,
             "verbose":true,
-            "format_data": true
+            "format_data": false
         },
         "settings": {
             "locksettings": {
